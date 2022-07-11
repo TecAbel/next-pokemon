@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:qa": "env-cmd -f .env.qa next dev",
     "build:qa": "env-cmd -f .env.qa next build",
-    "build": "next build",
+    "build": "env-cmd -f .env next build",
     "start": "next start",
     "lint": "next lint"
   },

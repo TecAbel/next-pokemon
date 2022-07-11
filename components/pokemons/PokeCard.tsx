@@ -1,10 +1,16 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { FC } from "react";
 import { PokemonSmall } from "../../interfaces/responses";
 
 const PokeCard: FC<PokemonSmall> = ({ name, img, id }) => {
+  const router = useRouter();
+  const gotoDetail = () => {
+    router.push(`/pokemon/${id}`);
+  };
   return (
     <div
+      onClick={gotoDetail}
       className="
     flex
     cursor-pointer
